@@ -1,0 +1,288 @@
+@use 'sass:math';
+@use 'sass:color';
+
+@import 'config';
+@import 'blocks/**/*';
+
+.header {
+    padding-top: 25px;
+    padding-bottom: 83px;
+    @include adaptive-value("padding-top", 25, 15, 1);
+    @include adaptive-value("padding-bottom", 83, 40, 1);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    flex: 1 1 auto;
+}
+
+.header__nav {
+    margin-right: 45px;
+}
+
+.header__login {
+    @include adaptive-value("margin-right", 45, 20, 1);
+}
+
+.home {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-image: url(../images/dist/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home__inner {
+    display: flex;
+    align-items: center;
+    @include adaptive-value("padding-bottom", 81, 40, 1);
+}
+
+.home__img {
+    width: 58.4%;
+}
+
+
+.home__label {
+    width: 40.2%;
+    @include adaptive-value("margin-right", 18, 12, 1);
+    &:not(:last-child) {
+        @include adaptive-value("margin-right", 18, 12, 1);
+    }
+}
+
+.home__label-caption {
+    @include adaptive-value("margin-bottom", 17, 10, 1);
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 17, 10, 1);
+    }
+}
+
+.home__label-title {
+    @include adaptive-value("font-size", 49, 30, 1);
+    @include adaptive-value("line-height", 64, 40, 1);
+    font-weight: 700;
+    letter-spacing: 1.5%;
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 30, 18, 1);
+    }
+}
+
+.home__label-text {
+    @include adaptive-value("font-size", 18, 12, 1);
+    line-height: 150%;
+    color: $light;
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 45, 25, 1);
+    }
+}
+
+
+.about {
+    @include adaptive-value("padding-top", 110, 50, 1);
+    @include adaptive-value("padding-bottom", 55, 30, 1);
+}
+
+.about__inner {
+    display: flex;
+    align-items: center;
+}
+
+.about__img {
+    width: 46%;
+    @include adaptive-value("margin-right", 81, 40, 1);
+}
+
+.about__label {
+    width: 37%;
+}
+
+.about__label-caption {
+    @include adaptive-value("margin-bottom", 13, 10, 1);
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 13, 10, 1);
+    }
+}
+
+.about__label-title {
+    @include adaptive-value("margin-bottom", 25, 15, 1);
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 25, 15, 1);
+    }
+}
+
+.about__label-text {
+    @include adaptive-value("font-size", 18, 12, 1);
+    line-height: 150%;
+    color: $light;
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 45, 25, 1);
+    }
+}
+
+
+.features {
+    @include adaptive-value("padding-top", 55, 30, 1);
+    @include adaptive-value("padding-bottom", 70, 35, 1);
+}
+
+.features__caption {
+    text-align: center;
+    @include adaptive-value("margin-bottom", 13, 10, 1);
+}
+
+.features__title {
+    text-align: center;
+    @include adaptive-value("margin-bottom", 60, 30, 1);
+}
+
+.features__inner {
+    display: flex;
+    align-items: flex-end;
+}
+
+.features__item {
+    &:not(:last-child) {
+        @include adaptive-value("margin-right", 30, 15, 1);
+    }
+}
+
+.recipes {
+    @include adaptive-value("padding-top", 70, 35, 1);
+    @include adaptive-value("padding-bottom", 144, 70, 1);
+}
+
+.recipes__caption {
+    text-align: center;
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 12, 8, 1);
+    }
+}
+
+.recipes__title {
+    text-align: center;
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 61, 30, 1);
+    }
+}
+
+.recipes__inner {
+    display: flex;
+}
+
+.recipes__card {
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.footer {
+    background-color: $pink;
+    @include adaptive-value("padding-top", 78, 40, 1);
+    @include adaptive-value("padding-bottom", 35, 15, 1);
+}
+
+.footer__inner {
+    display: flex;
+    @include adaptive-value("padding-bottom", 70, 35, 1);
+    border-bottom: 1px solid rgba($black, 0.2);
+    @include adaptive-value("margin-bottom", 35, 15, 1);
+}
+
+.footer__social {
+    max-width: 234px;
+    @include adaptive-value("margin-right", 59, 30, 1);
+}
+
+.footer__logo {
+    &:not(:last-child) {
+        margin-bottom: 5px
+    }
+}
+
+.footer__social-text {
+    @include adaptive-value("font-size", 16, 12, 1);
+    @include adaptive-value("line-height", 24, 18, 1);
+    color: $light;
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 40, 20, 1);
+    }
+}
+
+.footer__social-links {
+    display: flex;
+    align-items: center;
+}
+
+.footer__social-link {
+    &:not(:last-child) {
+        @include adaptive-value("margin-right", 15, 10, 1);
+    }
+    & img {
+        @include adaptive-value("width", 40, 30, 1);
+    }
+}
+
+.footer__menu {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+.footer__menu-item {
+    margin-right: 192px;
+    @media screen and (max-width: 1170px) {
+        margin-right: calc(60px + (192 - 60) * ((100vw - 768px) / (1170 - 768)));
+    }
+}
+
+.footer__title {
+    @include adaptive-value("font-size", 20, 16, 1);
+    @include adaptive-value("line-height", 30, 20, 1);
+    white-space: nowrap;
+    font-weight: 500;
+    color: $light;
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 30, 15, 1);
+    }
+}
+
+.footer__list-item {
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 20, 10, 1);
+    }
+}
+
+
+.footer__email-form {
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 20, 10, 1);
+    }
+}
+
+.footer__connect-link {
+    display: flex;
+    align-items: center;
+    & img {
+        @include adaptive-value("margin-right", 11, 6, 1);
+    }
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 15, 10, 1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@import 'adaptive.scss';
+

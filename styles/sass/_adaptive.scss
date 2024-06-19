@@ -1,0 +1,189 @@
+@media screen and (max-width: 768px) {
+    .home__inner {
+        flex-direction: column-reverse;
+    }
+    .home__label {
+        text-align: center;
+        margin-right: 0;
+        width: 70%;
+    }
+    .home__img {
+        margin-bottom: 15px;
+        width: 70%;
+    }
+    .home__label-btn {
+        margin: 0 auto;
+    }
+    .about__inner {
+        flex-direction: column;
+    }
+    .about__img {
+        width: 70%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .about__label {
+        width: 70%;
+        text-align: center;
+    }
+    .about__label-btn {
+        margin: 0 auto;
+    }
+    .features__inner {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .features__item {
+        &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+    .footer__inner {
+        flex-direction: column;
+        align-items: center;
+        width: 290px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .footer__social {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .footer__social-links {
+        justify-content: center;
+    }
+    .footer__logo > .logo__img {
+        margin: 0 auto;
+    }
+    .footer__menu-item {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+        margin: 0 15px;
+    }
+    .footer__menu {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .footer__connect-link {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: $pink;
+        z-index: 100;
+        padding: 15px 15px;
+        border-bottom: 1px solid $darkpink;
+        z-index: 100;
+    }
+    .logo__img {
+        @include adaptive-value("width", 100, 70, 1)
+    }
+    .header__sign-up {
+        margin-right: 20px;
+    }
+    .home {
+        padding-top: 100px;
+    }
+    .nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        overflow: auto;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 0.3s ease 0s;
+        &.active {
+            left: 0;
+        }
+    }
+    .nav__item {
+        &:not(:last-child) {
+            margin-right: 0;
+        }
+        margin: 10px 0;
+    }
+    .header__nav {
+        margin-right: 0;
+        background-color: $pink;
+        z-index: 10;
+    }
+    .nav-btn {
+        display: block;
+        z-index: 100;
+        width: 35px;
+        height: 20px;
+        position: relative;
+        &::before, &::after, & span {
+            content: '';
+            position: absolute;
+            background-color: $darkpink;
+            width: 100%;
+            height: 2px;
+            transition: all 0.3s ease 0s;
+        }
+        &::before {
+            top: 0;
+            left: 0;
+        }
+        &::after {
+            bottom: 0;
+            left: 0;
+        }
+        & span {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto 0;
+        }
+        &.active::before {
+            transform: rotate(45deg);
+            top: 9px;
+        }
+        &.active::after {
+            transform: rotate(-45deg);
+            top: 9px;
+        }
+        &.active span{
+            transform: scale(0);
+        }
+    }
+    .recipes__inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipes__card {
+        &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+    }
+    .card__btn {
+        bottom: -6%;
+    }
+    .card__img {
+        width: 140px;
+    }
+    .card__content {
+        margin-top: -70px;
+        padding-top: 90px;
+    }
+}
+

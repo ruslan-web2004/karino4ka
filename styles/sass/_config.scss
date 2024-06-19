@@ -1,0 +1,98 @@
+// USER VARIABLES SECTION
+$accent: #F6762C;
+$black: #190C05;
+$light: rgba($black, 0.6);
+$white: #FFFFFF;
+$pink: #FFE6D9;
+$darkpink: #FACEB9;
+
+// IMPORT SECTION
+
+
+
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: url($furl) format('woff2');
+	}
+}
+
+@include font('poppins', normal, 400, '../fonts/Poppins-Regular.woff2');
+@include font('poppins', normal, 500, '../fonts/Poppins-Medium.woff2');
+@include font('poppins', normal, 700, '../fonts/Poppins-Bold.woff2');
+
+
+// GENERAL CSS SETTINGS
+
+
+
+html {
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+  }
+  
+  *,
+  *::after,
+  *::before {
+	-webkit-box-sizing: inherit;
+			box-sizing: inherit;
+  }
+  
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  li,
+  figure,
+  figcaption,
+  blockquote,
+  dl,
+  dd {
+	margin: 0;
+  }
+  
+  ul[class] {
+	list-style: none;
+	padding: 0;
+  }
+  
+  img {
+	max-width: 100%;
+	display: block;
+  }
+  
+  input,
+  button,
+  textarea,
+  select {
+	font: inherit;
+  }
+  
+  a {
+	text-decoration: none;
+  }
+
+.body {
+	font-family: 'poppins', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1;
+  color: $black;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+	&.lock {
+		overflow: hidden;
+	}
+}

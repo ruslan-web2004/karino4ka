@@ -1,0 +1,223 @@
+// GENERAL PROJECT STYLES
+@import 'mixins.scss';
+
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    max-width: 1280px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: 700;
+    line-height: 145%;
+    @include adaptive-value("font-size", 39, 24, 1);
+}
+
+.text {
+    color: $light;
+    @include adaptive-value("font-size", 16, 14, 1);
+    line-height: 150%;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__item {
+    &:not(:last-child) {
+        margin-right: 21px;
+    }
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    color: rgba($black, 0.4);
+    line-height: 25px;
+    transition: color 0.3s ease 0s;
+    & img {
+        margin-right: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease 0s;
+    }
+    &:hover {
+        color: $accent;
+        & img {
+            opacity: 1;
+        }
+    }
+}
+
+.nav-btn {
+    display: none;
+}
+
+.login {
+    color: $light;
+    font-weight: 500;
+    white-space: nowrap;
+    &:hover {
+        color: $accent;
+    }
+}
+
+.btn {
+    display: block;
+    color: $white;
+    @include adaptive-value("font-size", 16, 12, 1);
+    @include adaptive-value("line-height", 24, 16, 1);
+    letter-spacing: 10%;
+    white-space: nowrap;
+    background: linear-gradient(180deg, #F6762C 0%, #C65311 100%);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;;
+    @include adaptive-value("padding-top", 15, 8, 1);
+    @include adaptive-value("padding-bottom", 15, 8, 1);
+    @include adaptive-value("padding-left", 30, 15, 1);
+    @include adaptive-value("padding-right", 30, 15, 1);
+    transition: color 0.3s ease 0s;
+    &:hover, &:focus {
+        background: transparent;
+        color: $accent;
+        outline: 2px solid $accent;
+    }
+    &_black {
+        background: linear-gradient(180deg, #190C05 0%, rgba(25, 12, 5, 0.79) 100%);
+        &:hover, &:focus {
+            background: transparent;
+            color: $black;
+            outline: 2px solid $black;
+        }
+    }
+}
+
+.caption {
+    color: $accent;
+    @include adaptive-value("font-size", 16, 12, 1);
+    font-weight: 500;
+    letter-spacing: 10%;
+    text-transform: uppercase;
+    align-self: flex-start;
+    position: relative;
+    & span {
+        position: absolute;
+        @include adaptive-value("width", 45, 25, 1);
+        height: 1px;
+        background: $accent;
+        margin-left: 5px;
+        bottom: 2.2px;
+    }
+}
+
+.item-features {
+    max-width: 362px;
+    text-align: center;
+}
+
+.item-features__img {
+    @include adaptive-value("width", 80, 50, 1);
+    @include adaptive-value("margin-bottom", 25, 15, 1);
+    margin: 0 auto;
+}
+
+.item-features__title {
+    color: rgba($black, 0.8);
+    font-weight: 500;
+    @include adaptive-value("font-size", 25, 18, 1);
+    @include adaptive-value("line-height", 38, 24, 1);
+    &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 15, 10, 1);
+    }
+}
+
+.card {
+    @include adaptive-value("width", 360, 290, 1);
+    position: relative;
+}
+
+.card__img {
+    margin: 0 auto;
+}
+
+
+.card__content {
+    background: rgba($accent, 0.02);
+    border: 2px solid rgba($accent, 0.2);
+    border-radius: 25px;
+    padding-top: 124px;
+    margin-top: -83px;
+}
+
+.card__title {
+    @include adaptive-value("font-size", 25, 18, 1);
+    @include adaptive-value("line-height", 38, 24, 1);
+    font-weight: 500;
+    color: rgba($black, 0.8);
+    @include adaptive-value("margin-bottom", 15, 10, 1);
+    text-align: center;
+}
+
+.card__text {
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 0 10px;
+    @include adaptive-value("margin-bottom", 41, 20, 1);
+}
+
+.card__btn {
+    @include adaptive-value("width", 145, 95, 1);
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+
+.form-email {
+    background-color: $white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    max-width: 262px;
+}
+
+.form-email__input {
+    border: none;
+    padding: 13px 7px 13px 23px;
+    border-radius: 10px;
+    width: 100%;
+    &:hover, &:focus {
+        outline: none;
+    }
+}
+
+.form-email__btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.footer-link {
+    color: $black;
+    color: $light;
+    @include adaptive-value("font-size", 16, 12, 1);
+    @include adaptive-value("line-height", 24, 18, 1);
+    transition: color 0.3s ease 0s;
+    &:hover, &:focus {
+        color: $accent;
+    }
+}
+
+
+
